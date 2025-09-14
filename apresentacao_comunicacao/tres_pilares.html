@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 24px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .pilar-card {
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .pilar-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .pilar-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+      .pilar-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      .pilar-content.active {
+        max-height: 300px;
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-12">
+      <div class="flex items-center mb-8">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Os Três Pilares da Comunicação Interpessoal</h1>
+      </div>
+      
+      <div class="flex mb-8">
+        <div class="w-1/2 pr-8">
+          <img src="/home/ubuntu/upload/search_images/J2JIe1XU052y.jpg" alt="Pilares da comunicação" class="rounded-lg shadow-lg animated-element" style="width: 550px; height: 320px; object-fit: cover;">
+        </div>
+        
+        <div class="w-1/2 pl-8">
+          <p class="text-lg mb-6 animated-element" style="animation-delay: 0.2s">
+            A comunicação interpessoal eficaz é fundamental para o sucesso profissional, especialmente em ambientes técnicos como a engenharia. Ela se baseia em três pilares essenciais que se complementam e se reforçam mutuamente.
+          </p>
+          <p class="text-lg animated-element" style="animation-delay: 0.4s">
+            Clique em cada pilar abaixo para saber mais sobre sua importância e aplicação no contexto da engenharia.
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex space-x-6">
+        <!-- Pilar 1: Clareza -->
+        <div class="pilar-card bg-blue-50 flex-1 animated-element" style="animation-delay: 0.6s" data-pilar="clareza">
+          <div class="pilar-icon bg-blue-100 mx-auto">
+            <i class="fas fa-bullseye text-4xl text-blue-600"></i>
+          </div>
+          <h2 class="text-center">Clareza</h2>
+          <div class="pilar-content" id="clareza-content">
+            <p class="mb-4">
+              A <strong>clareza</strong> é a capacidade de transmitir informações de forma precisa e compreensível.
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>Traduzir conceitos técnicos complexos em linguagem acessível</li>
+              <li>Estruturar ideias de forma lógica e sequencial</li>
+              <li>Verificar a compreensão do interlocutor</li>
+              <li>Usar recursos visuais e analogias quando necessário</li>
+            </ul>
+            <p class="text-sm italic">
+              "A clareza evita mal-entendidos, retrabalho e frustrações no ambiente profissional."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Pilar 2: Empatia -->
+        <div class="pilar-card bg-green-50 flex-1 animated-element" style="animation-delay: 0.8s" data-pilar="empatia">
+          <div class="pilar-icon bg-green-100 mx-auto">
+            <i class="fas fa-heart text-4xl text-green-600"></i>
+          </div>
+          <h2 class="text-center">Empatia</h2>
+          <div class="pilar-content" id="empatia-content">
+            <p class="mb-4">
+              A <strong>empatia</strong> é a habilidade de compreender e considerar as perspectivas, sentimentos e necessidades dos outros.
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>Praticar escuta ativa e atenta</li>
+              <li>Considerar o conhecimento e experiência do interlocutor</li>
+              <li>Adaptar a comunicação ao contexto e às características do outro</li>
+              <li>Reconhecer sinais não-verbais e emoções</li>
+            </ul>
+            <p class="text-sm italic">
+              "Um engenheiro empático consegue construir pontes entre diferentes áreas e níveis hierárquicos."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Pilar 3: Assertividade -->
+        <div class="pilar-card bg-red-50 flex-1 animated-element" style="animation-delay: 1s" data-pilar="assertividade">
+          <div class="pilar-icon bg-red-100 mx-auto">
+            <i class="fas fa-bolt text-4xl text-red-600"></i>
+          </div>
+          <h2 class="text-center">Assertividade</h2>
+          <div class="pilar-content" id="assertividade-content">
+            <p class="mb-4">
+              A <strong>assertividade</strong> é expressar pensamentos, sentimentos e necessidades de forma direta, honesta e respeitosa.
+            </p>
+            <ul class="list-disc pl-5 mb-4">
+              <li>Defender ideias e posições com confiança</li>
+              <li>Manter equilíbrio entre passividade e agressividade</li>
+              <li>Estabelecer limites claros quando necessário</li>
+              <li>Fornecer feedback construtivo</li>
+            </ul>
+            <p class="text-sm italic">
+              "Na engenharia, a assertividade é crucial para defender soluções técnicas, apontar riscos e negociar recursos."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade dos cards de pilares
+        const pilarCards = document.querySelectorAll('.pilar-card');
+        
+        pilarCards.forEach(card => {
+          card.addEventListener('click', function() {
+            const pilar = this.getAttribute('data-pilar');
+            const content = document.getElementById(`${pilar}-content`);
+            
+            // Toggle da classe active no conteúdo clicado
+            content.classList.toggle('active');
+            
+            // Fecha os outros conteúdos
+            pilarCards.forEach(otherCard => {
+              if (otherCard !== card) {
+                const otherPilar = otherCard.getAttribute('data-pilar');
+                const otherContent = document.getElementById(`${otherPilar}-content`);
+                otherContent.classList.remove('active');
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

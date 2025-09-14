@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 24px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .case-phase {
+        border-left: 4px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+      }
+      .case-phase:hover {
+        background-color: #EBF5FB;
+        transform: translateX(5px);
+      }
+      .challenge-tag {
+        background-color: #E74C3C;
+        color: white;
+        border-radius: 16px;
+        padding: 4px 12px;
+        font-size: 14px;
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+      .solution-tag {
+        background-color: #2ECC71;
+        color: white;
+        border-radius: 16px;
+        padding: 4px 12px;
+        font-size: 14px;
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-12">
+      <div class="flex items-center mb-8">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Case: O Projeto Interdepartamental</h1>
+      </div>
+      
+      <div class="flex">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-8">
+          <div class="case-phase animated-element" style="animation-delay: 0.2s">
+            <h2>Situação Inicial</h2>
+            <p class="mb-4">
+              Maria, engenheira elétrica, lidera um projeto que envolve colaboração com os departamentos de TI, marketing e financeiro.
+            </p>
+            <div class="mb-2">
+              <span class="challenge-tag">Desafio</span>
+              <span class="challenge-tag">Comunicação Técnica</span>
+            </div>
+          </div>
+          
+          <div class="case-phase animated-element" style="animation-delay: 0.4s">
+            <h2>Problema</h2>
+            <p class="mb-4">
+              Nas primeiras reuniões, Maria apresentou especificações técnicas detalhadas usando terminologia específica da engenharia. Os representantes dos outros departamentos ficaram confusos, mas ela continuou com sua apresentação.
+            </p>
+            <div class="mb-2">
+              <span class="challenge-tag">Falta de Clareza</span>
+              <span class="challenge-tag">Baixa Empatia</span>
+            </div>
+          </div>
+          
+          <div class="case-phase animated-element" style="animation-delay: 0.6s">
+            <h2>Consequências</h2>
+            <p class="mb-4">
+              Recebeu pouco feedback, cada departamento entendeu os requisitos de forma diferente, o cronograma começou a atrasar, e a frustração cresceu em toda a equipe.
+            </p>
+            <div class="mb-2">
+              <span class="challenge-tag">Atrasos</span>
+              <span class="challenge-tag">Conflitos</span>
+              <span class="challenge-tag">Retrabalho</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-8">
+          <div class="mb-6">
+            <img src="/home/ubuntu/upload/search_images/gWJcMsB33iMS.jpg" alt="Reunião de equipe de engenharia" class="rounded-lg shadow-lg animated-element" style="width: 550px; height: 300px; object-fit: cover;">
+          </div>
+          
+          <div class="case-phase animated-element" style="animation-delay: 0.8s">
+            <h2>Solução</h2>
+            <p class="mb-4">
+              Maria mudou sua abordagem: marcou reuniões individuais com cada departamento, redesenhou suas apresentações adaptando a linguagem para cada público, criou analogias para facilitar o entendimento e passou a verificar constantemente a compreensão.
+            </p>
+            <div class="mb-2">
+              <span class="solution-tag">Clareza</span>
+              <span class="solution-tag">Empatia</span>
+              <span class="solution-tag">Adaptação</span>
+            </div>
+          </div>
+          
+          <div class="case-phase animated-element" style="animation-delay: 1s">
+            <h2>Resultado</h2>
+            <p class="mb-4">
+              A comunicação melhorou significativamente e o projeto voltou aos trilhos. Maria aprendeu a ser mais assertiva ao defender aspectos técnicos não negociáveis, explicando claramente as razões e consequências.
+            </p>
+            <div class="mb-2">
+              <span class="solution-tag">Assertividade</span>
+              <span class="solution-tag">Sucesso do Projeto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 bg-gray-100 p-6 rounded-lg animated-element" style="animation-delay: 1.2s">
+        <h2 class="mb-4">Perguntas para Discussão</h2>
+        <div class="flex space-x-8">
+          <div class="flex-1">
+            <div class="flex items-start mb-3">
+              <i class="fas fa-question-circle text-blue-600 mt-1 mr-2"></i>
+              <p>Quais foram os erros iniciais de Maria em relação aos três pilares da comunicação?</p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-start mb-3">
+              <i class="fas fa-question-circle text-blue-600 mt-1 mr-2"></i>
+              <p>Como ela aplicou clareza, empatia e assertividade para resolver o problema?</p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-start">
+              <i class="fas fa-question-circle text-blue-600 mt-1 mr-2"></i>
+              <p>Que estratégias específicas você poderia sugerir para Maria continuar melhorando?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade das fases do caso
+        const casePhases = document.querySelectorAll('.case-phase');
+        
+        casePhases.forEach(phase => {
+          phase.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 4px 12px rgba(52, 152, 219, 0.2)';
+          });
+          
+          phase.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 12px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .progress-bar {
+        height: 8px;
+        border-radius: 4px;
+        background-color: #EBF5FB;
+        margin-bottom: 16px;
+      }
+      .progress-fill {
+        height: 100%;
+        border-radius: 4px;
+        background-color: #3498DB;
+        width: 100%;
+        transition: width 1.5s ease;
+      }
+      .activity-item {
+        border-left: 3px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .activity-item:hover {
+        border-left-color: #E74C3C;
+        transform: translateX(5px);
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-8 grid grid-rows-1">
+      <div class="flex h-full">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-6 flex flex-col justify-evenly">
+          <div class="flex items-center mb-4">
+            <div class="accent-bar h-10 mr-4"></div>
+            <h1 class="animated-element">Aula 3: Consolidação e Avaliação</h1>
+          </div>
+          
+          <div class="mb-4 animated-element" style="animation-delay: 0.2s">
+            <h2>Progresso do Treinamento</h2>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span>Aula 1</span>
+              <span>Aula 2</span>
+              <span class="font-bold text-blue-600">Aula 3</span>
+            </div>
+          </div>
+          
+          <h2 class="animated-element" style="animation-delay: 0.3s">Objetivos da Aula</h2>
+          <ul class="mb-4 text-lg">
+            <li class="flex items-center mb-2 animated-element" style="animation-delay: 0.4s">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Consolidar os conhecimentos adquiridos
+            </li>
+            <li class="flex items-center mb-2 animated-element" style="animation-delay: 0.5s">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Avaliar a compreensão dos três pilares
+            </li>
+            <li class="flex items-center mb-2 animated-element" style="animation-delay: 0.6s">
+              <i class="fas fa-check-circle text-green-500 mr-2"></i>
+              Definir compromissos de aplicação prática
+            </li>
+          </ul>
+          
+          <h2 class="animated-element" style="animation-delay: 0.7s">Atividades da Aula</h2>
+          <div class="flex flex-col space-y-2 text-lg">
+            <div class="activity-item animated-element" style="animation-delay: 0.8s" id="activity-1">
+              <h3 class="font-semibold">Revisão Geral</h3>
+              <p class="text-sm">Recapitulação dos principais conceitos</p>
+            </div>
+            <div class="activity-item animated-element" style="animation-delay: 0.9s" id="activity-2">
+              <h3 class="font-semibold">O que eu aprendi?</h3>
+              <p class="text-sm">Atividade em grupos para compartilhar insights</p>
+            </div>
+            <div class="activity-item animated-element" style="animation-delay: 1.0s" id="activity-3">
+              <h3 class="font-semibold">Avaliação e Próximos Passos</h3>
+              <p class="text-sm">Questionário e materiais complementares</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-6 flex flex-col justify-evenly">
+          <div class="mb-4">
+            <img src="/home/ubuntu/upload/search_images/vkDg2Fx8mOiw.jpg" alt="Comunicação interpessoal corporativa" class="rounded-lg shadow-lg animated-element" style="width: 550px; height: 320px; object-fit: cover;">
+          </div>
+          
+          <div class="bg-blue-50 rounded-lg p-5 animated-element" style="animation-delay: 0.6s">
+            <h2 class="flex items-center">
+              <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+              Reflexão Final
+            </h2>
+            <p class="mb-3">
+              Ao concluir este módulo sobre comunicação interpessoal, reflita:
+            </p>
+            <div id="reflection-content" class="text-lg">
+              <p class="mb-2">Como os três pilares da comunicação podem transformar sua prática profissional?</p>
+            </div>
+            <button id="change-reflection" class="mt-3 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+              Próxima reflexão
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Animação da barra de progresso
+        setTimeout(() => {
+          document.getElementById('progress-fill').style.width = '100%';
+        }, 500);
+        
+        // Interatividade dos itens de atividade
+        const activityItems = document.querySelectorAll('.activity-item');
+        
+        activityItems.forEach(item => {
+          item.addEventListener('click', function() {
+            // Adiciona/remove classe de destaque
+            this.classList.toggle('bg-blue-50');
+            
+            // Alterna o ícone
+            const title = this.querySelector('h3');
+            if (this.classList.contains('bg-blue-50')) {
+              if (!title.querySelector('i')) {
+                title.innerHTML = `<i class="fas fa-arrow-right text-blue-500 mr-2"></i>` + title.innerHTML;
+              }
+            } else {
+              title.innerHTML = title.innerHTML.replace(/<i class="fas fa-arrow-right.*?<\/i>/, '');
+            }
+          });
+        });
+        
+        // Botão de reflexão
+        const reflections = [
+          "Como os três pilares da comunicação podem transformar sua prática profissional?",
+          "Qual dos pilares representa seu maior desafio pessoal? Por quê?",
+          "Como você pode aplicar o que aprendeu em situações específicas do seu trabalho?",
+          "Que compromisso concreto você pode assumir para melhorar sua comunicação?"
+        ];
+        
+        let currentReflection = 0;
+        
+        document.getElementById('change-reflection').addEventListener('click', function() {
+          currentReflection = (currentReflection + 1) % reflections.length;
+          const reflectionContent = document.getElementById('reflection-content');
+          
+          // Animação de fade out/in
+          reflectionContent.style.opacity = 0;
+          
+          setTimeout(() => {
+            reflectionContent.innerHTML = `<p class="mb-2">${reflections[currentReflection]}</p>`;
+            reflectionContent.style.opacity = 1;
+          }, 300);
+        });
+      });
+    </script>
+  </body>
+</html>
+

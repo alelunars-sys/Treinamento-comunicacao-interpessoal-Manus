@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 12px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .feedback-step {
+        border-left: 4px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+      }
+      .feedback-step:hover {
+        transform: translateX(5px);
+        background-color: #EBF5FB;
+      }
+      .step-letter {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      .example-box {
+        border: 1px solid #3498DB;
+        border-radius: 8px;
+        padding: 12px;
+        background-color: #F8FBFD;
+        margin-top: 12px;
+        position: relative;
+        cursor: pointer;
+      }
+      .example-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      .example-content.active {
+        max-height: 200px;
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-10 grid grid-rows-1">
+      <div class="flex items-center mb-4">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Feedback Estruturado e Construtivo</h1>
+      </div>
+      
+      <div class="flex justify-evenly">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-6">
+          <h2 class="animated-element" style="animation-delay: 0.2s">Modelo SCI: Situação, Comportamento, Impacto</h2>
+          
+          <div class="feedback-step animated-element" style="animation-delay: 0.3s">
+            <div class="flex items-center">
+              <div class="step-letter bg-blue-500 text-white">S</div>
+              <h3 class="text-xl font-semibold">Situação</h3>
+            </div>
+            <p class="mt-1">Descreva o contexto específico em que o comportamento ocorreu.</p>
+          </div>
+          
+          <div class="feedback-step animated-element" style="animation-delay: 0.5s">
+            <div class="flex items-center">
+              <div class="step-letter bg-green-500 text-white">C</div>
+              <h3 class="text-xl font-semibold">Comportamento</h3>
+            </div>
+            <p class="mt-1">Descreva objetivamente o comportamento observado, sem julgamentos.</p>
+          </div>
+          
+          <div class="feedback-step animated-element" style="animation-delay: 0.7s">
+            <div class="flex items-center">
+              <div class="step-letter bg-red-500 text-white">I</div>
+              <h3 class="text-xl font-semibold">Impacto</h3>
+            </div>
+            <p class="mt-1">Explique como o comportamento afetou você, a equipe ou o projeto.</p>
+          </div>
+          
+          <div class="example-box mt-4 animated-element" style="animation-delay: 0.9s" id="example-box">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Exemplo Prático</h3>
+              <i class="fas fa-chevron-down text-blue-500"></i>
+            </div>
+            <div class="example-content" id="example-content">
+              <div class="mt-3 p-2 bg-white rounded">
+                <p class="mb-1"><strong class="text-blue-500">S:</strong> "Na reunião de projeto ontem..."</p>
+                <p class="mb-1"><strong class="text-green-500">C:</strong> "...você interrompeu a apresentação três vezes..."</p>
+                <p class="mb-1"><strong class="text-red-500">I:</strong> "...isso fez com que perdêssemos pontos importantes."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-6">
+          <div class="mb-4">
+            <img src="/home/ubuntu/upload/search_images/MtcEfZ2ajRGy.webp" alt="Guia para feedback construtivo" class="rounded-lg shadow-lg animated-element" style="width: 520px; height: 280px; object-fit: cover;">
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg animated-element" style="animation-delay: 0.4s">
+            <h2 class="mb-2">Princípios do Feedback Construtivo</h2>
+            
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <div class="bg-blue-100 rounded-full p-2 mr-2">
+                  <i class="fas fa-clock text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Oportuno</h3>
+                  <p class="text-sm">Ofereça feedback logo após a situação.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="bg-blue-100 rounded-full p-2 mr-2">
+                  <i class="fas fa-balance-scale text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Equilibrado</h3>
+                  <p class="text-sm">Combine pontos positivos e melhorias.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="bg-blue-100 rounded-full p-2 mr-2">
+                  <i class="fas fa-bullseye text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Específico</h3>
+                  <p class="text-sm">Foque em comportamentos concretos.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="bg-blue-100 rounded-full p-2 mr-2">
+                  <i class="fas fa-hands-helping text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Construtivo</h3>
+                  <p class="text-sm">Oriente para soluções e crescimento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4 text-center animated-element" style="animation-delay: 1s">
+            <button id="practice-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+              Praticar Agora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade do exemplo prático
+        const exampleBox = document.getElementById('example-box');
+        const exampleContent = document.getElementById('example-content');
+        const chevronIcon = exampleBox.querySelector('.fa-chevron-down');
+        
+        exampleBox.addEventListener('click', function() {
+          exampleContent.classList.toggle('active');
+          chevronIcon.classList.toggle('fa-chevron-down');
+          chevronIcon.classList.toggle('fa-chevron-up');
+        });
+        
+        // Interatividade do botão de prática
+        const practiceBtn = document.getElementById('practice-btn');
+        
+        practiceBtn.addEventListener('click', function() {
+          // Cria um modal de prática
+          const modal = document.createElement('div');
+          modal.className = 'fixed inset-0 flex items-center justify-center z-50';
+          modal.innerHTML = `
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="bg-white rounded-lg p-6 max-w-lg z-10 relative">
+              <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+              </button>
+              <h3 class="text-xl font-bold mb-3">Exercício de Feedback</h3>
+              <p class="mb-3">Situação: Um colega chegou atrasado para uma reunião importante.</p>
+              <div class="mb-3">
+                <label class="block mb-2 font-semibold">Como você daria feedback usando o modelo SCI?</label>
+                <textarea class="w-full border border-gray-300 rounded p-2 h-24" placeholder="Escreva seu feedback aqui..."></textarea>
+              </div>
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                Verificar
+              </button>
+            </div>
+          `;
+          
+          document.body.appendChild(modal);
+          
+          // Adiciona evento para fechar o modal
+          const closeBtn = modal.querySelector('.fa-times');
+          closeBtn.parentElement.addEventListener('click', function() {
+            document.body.removeChild(modal);
+          });
+          
+          // Adiciona evento para o botão de verificar
+          const checkBtn = modal.querySelector('button:last-child');
+          checkBtn.addEventListener('click', function() {
+            const textarea = modal.querySelector('textarea');
+            const feedback = textarea.value.toLowerCase();
+            
+            let response = '';
+            
+            if (feedback.includes('situação') && feedback.includes('comportamento') && feedback.includes('impacto')) {
+              response = '<p class="text-green-600 font-semibold">Muito bem! Você aplicou corretamente o modelo SCI.</p>';
+            } else {
+              response = '<p class="text-orange-500 font-semibold">Tente novamente. Lembre-se dos três elementos: Situação, Comportamento e Impacto.</p>';
+            }
+            
+            // Adiciona a resposta ao modal
+            const responseDiv = document.createElement('div');
+            responseDiv.className = 'mt-3';
+            responseDiv.innerHTML = response;
+            
+            // Verifica se já existe uma resposta e a remove
+            const existingResponse = modal.querySelector('.mt-3');
+            if (existingResponse) {
+              existingResponse.parentNode.removeChild(existingResponse);
+            }
+            
+            modal.querySelector('.max-w-lg').appendChild(responseDiv);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 24px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .commitment-item {
+        border-left: 3px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+      }
+      .commitment-item:hover {
+        transform: translateX(5px);
+        background-color: #EBF5FB;
+      }
+      .insight-bubble {
+        background-color: #F8F9FA;
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 12px;
+        border-left: 4px solid #3498DB;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .insight-bubble:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-12">
+      <div class="flex items-center mb-8">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Aprendizados e Compromissos</h1>
+      </div>
+      
+      <div class="flex">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-8">
+          <div class="mb-6">
+            <img src="/home/ubuntu/upload/search_images/U15lxFg7RWAU.jpg" alt="Relevância da comunicação corporativa" class="rounded-lg shadow-lg animated-element" style="width: 520px; height: 300px; object-fit: cover;">
+          </div>
+          
+          <div class="mt-8 animated-element" style="animation-delay: 0.4s">
+            <h2>Principais Insights do Grupo</h2>
+            <div class="insight-bubble" id="insight-1">
+              <div class="flex items-start">
+                <div class="bg-blue-100 rounded-full p-2 mr-3 flex-shrink-0">
+                  <i class="fas fa-lightbulb text-blue-600"></i>
+                </div>
+                <p>"A clareza na comunicação técnica não significa simplificar demais, mas adaptar a mensagem ao público."</p>
+              </div>
+            </div>
+            
+            <div class="insight-bubble" id="insight-2">
+              <div class="flex items-start">
+                <div class="bg-green-100 rounded-full p-2 mr-3 flex-shrink-0">
+                  <i class="fas fa-heart text-green-600"></i>
+                </div>
+                <p>"A empatia é essencial para construir pontes entre diferentes áreas técnicas e níveis hierárquicos."</p>
+              </div>
+            </div>
+            
+            <div class="insight-bubble" id="insight-3">
+              <div class="flex items-start">
+                <div class="bg-red-100 rounded-full p-2 mr-3 flex-shrink-0">
+                  <i class="fas fa-bolt text-red-600"></i>
+                </div>
+                <p>"Ser assertivo não significa ser inflexível, mas defender ideias com confiança e respeito."</p>
+              </div>
+            </div>
+            
+            <button id="add-insight" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors flex items-center">
+              <i class="fas fa-plus mr-2"></i> Adicionar seu insight
+            </button>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-8">
+          <h2 class="animated-element" style="animation-delay: 0.2s">Compromisso de Aplicação Prática</h2>
+          
+          <div class="mb-6 animated-element" style="animation-delay: 0.3s">
+            <p class="mb-4">
+              Defina uma meta SMART (Específica, Mensurável, Alcançável, Relevante e Temporal) 
+              relacionada à melhoria de sua comunicação interpessoal para as próximas duas semanas:
+            </p>
+            
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <textarea id="smart-goal" class="w-full h-24 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Minha meta SMART é..."></textarea>
+              <div class="flex justify-end mt-2">
+                <button id="save-goal" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">
+                  Salvar Meta
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 animated-element" style="animation-delay: 0.5s">
+            <h2>Áreas de Desenvolvimento</h2>
+            <div style="height: 300px;">
+              <canvas id="skillsChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade dos insights
+        const insightBubbles = document.querySelectorAll('.insight-bubble');
+        
+        insightBubbles.forEach(bubble => {
+          bubble.addEventListener('click', function() {
+            // Adiciona/remove classe de destaque
+            this.classList.toggle('border-l-8');
+            
+            // Alterna a cor de fundo
+            if (this.classList.contains('border-l-8')) {
+              this.style.backgroundColor = '#EBF5FB';
+            } else {
+              this.style.backgroundColor = '#F8F9FA';
+            }
+          });
+        });
+        
+        // Botão de adicionar insight
+        document.getElementById('add-insight').addEventListener('click', function() {
+          const insightContainer = this.parentElement;
+          const newInsight = document.createElement('div');
+          newInsight.className = 'insight-bubble';
+          newInsight.innerHTML = `
+            <div class="flex items-start">
+              <div class="bg-purple-100 rounded-full p-2 mr-3 flex-shrink-0">
+                <i class="fas fa-comment-dots text-purple-600"></i>
+              </div>
+              <textarea class="w-full p-2 border border-gray-300 rounded" placeholder="Digite seu insight aqui..."></textarea>
+            </div>
+            <div class="flex justify-end mt-2">
+              <button class="save-new-insight bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm">Salvar</button>
+            </div>
+          `;
+          
+          // Insere antes do botão
+          insightContainer.insertBefore(newInsight, this);
+          
+          // Adiciona evento ao botão de salvar
+          newInsight.querySelector('.save-new-insight').addEventListener('click', function() {
+            const textarea = this.parentElement.previousElementSibling.querySelector('textarea');
+            const text = textarea.value.trim();
+            
+            if (text) {
+              const parent = this.closest('.insight-bubble');
+              parent.innerHTML = `
+                <div class="flex items-start">
+                  <div class="bg-purple-100 rounded-full p-2 mr-3 flex-shrink-0">
+                    <i class="fas fa-comment-dots text-purple-600"></i>
+                  </div>
+                  <p>${text}</p>
+                </div>
+              `;
+              
+              // Adiciona o mesmo evento de clique
+              parent.addEventListener('click', function() {
+                this.classList.toggle('border-l-8');
+                if (this.classList.contains('border-l-8')) {
+                  this.style.backgroundColor = '#EBF5FB';
+                } else {
+                  this.style.backgroundColor = '#F8F9FA';
+                }
+              });
+            }
+          });
+        });
+        
+        // Botão de salvar meta
+        document.getElementById('save-goal').addEventListener('click', function() {
+          const textarea = document.getElementById('smart-goal');
+          const goal = textarea.value.trim();
+          
+          if (goal) {
+            this.textContent = 'Meta Salva!';
+            this.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+            this.classList.add('bg-green-500');
+            textarea.disabled = true;
+            
+            // Restaura após 3 segundos
+            setTimeout(() => {
+              this.textContent = 'Salvar Meta';
+              this.classList.remove('bg-green-500');
+              this.classList.add('bg-blue-500', 'hover:bg-blue-600');
+              textarea.disabled = false;
+            }, 3000);
+          }
+        });
+        
+        // Gráfico de áreas de desenvolvimento
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: ['Clareza', 'Empatia', 'Assertividade', 'Escuta Ativa', 'Feedback', 'Adaptabilidade'],
+            datasets: [{
+              label: 'Autoavaliação Inicial',
+              data: [2, 3, 2, 4, 3, 3],
+              backgroundColor: 'rgba(52, 152, 219, 0.2)',
+              borderColor: 'rgba(52, 152, 219, 1)',
+              pointBackgroundColor: 'rgba(52, 152, 219, 1)',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: 'rgba(52, 152, 219, 1)'
+            }, {
+              label: 'Meta para Desenvolvimento',
+              data: [4, 5, 4, 5, 4, 4],
+              backgroundColor: 'rgba(231, 76, 60, 0.2)',
+              borderColor: 'rgba(231, 76, 60, 1)',
+              pointBackgroundColor: 'rgba(231, 76, 60, 1)',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: 'rgba(231, 76, 60, 1)'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              r: {
+                angleLines: {
+                  display: true
+                },
+                suggestedMin: 0,
+                suggestedMax: 5
+              }
+            },
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.dataset.label + ': ' + context.raw + '/5';
+                  }
+                }
+              }
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

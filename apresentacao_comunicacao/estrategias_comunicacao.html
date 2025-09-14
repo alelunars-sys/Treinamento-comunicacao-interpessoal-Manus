@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 24px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .strategy-item {
+        border-left: 4px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .strategy-item:hover {
+        transform: translateX(5px);
+        background-color: #F8FBFD;
+      }
+      .strategy-title {
+        font-weight: 600;
+        color: #3498DB;
+        display: flex;
+        align-items: center;
+      }
+      .strategy-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      .strategy-content.active {
+        max-height: 200px;
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-12">
+      <div class="flex items-center mb-8">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Estratégias de Comunicação Eficaz</h1>
+      </div>
+      
+      <div class="flex">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-8">
+          <img src="/home/ubuntu/upload/search_images/tg7uOatgPNL8.webp" alt="Importância da comunicação interpessoal" class="rounded-lg shadow-lg mb-6 animated-element" style="width: 500px; height: 280px; object-fit: cover;">
+          
+          <div class="bg-blue-50 p-4 rounded-lg animated-element" style="animation-delay: 0.3s">
+            <h2 class="text-center mb-3">Aplicação Prática</h2>
+            <p class="text-center">
+              Estas estratégias foram desenvolvidas considerando o perfil Acomodador (Kolb), 
+              que aprende melhor fazendo e experimentando, com foco em experiências práticas e colaborativas.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-8">
+          <h2 class="mb-4 animated-element" style="animation-delay: 0.2s">Como aplicar na sua rotina:</h2>
+          
+          <!-- Estratégia 1 -->
+          <div class="strategy-item animated-element" style="animation-delay: 0.4s" data-strategy="mapeamento">
+            <div class="strategy-title">
+              <i class="fas fa-sitemap mr-2"></i>
+              Mapeamento de stakeholders
+            </div>
+            <div class="strategy-content" id="mapeamento-content">
+              <ul class="list-disc pl-5 mt-2 mb-2">
+                <li>Identifique todos os envolvidos antes de comunicações importantes</li>
+                <li>Liste o que cada grupo já sabe, precisa saber e suas preocupações</li>
+                <li>Adapte sua mensagem considerando esses fatores</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Estratégia 2 -->
+          <div class="strategy-item animated-element" style="animation-delay: 0.6s" data-strategy="preparacao">
+            <div class="strategy-title">
+              <i class="fas fa-tasks mr-2"></i>
+              Preparação consciente
+            </div>
+            <div class="strategy-content" id="preparacao-content">
+              <ul class="list-disc pl-5 mt-2 mb-2">
+                <li>Reserve tempo para estruturar comunicações importantes</li>
+                <li>Crie um esboço com pontos-chave e exemplos</li>
+                <li>Prepare recursos visuais adaptados ao público</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Estratégia 3 -->
+          <div class="strategy-item animated-element" style="animation-delay: 0.8s" data-strategy="escuta">
+            <div class="strategy-title">
+              <i class="fas fa-headphones mr-2"></i>
+              Técnicas de escuta ativa
+            </div>
+            <div class="strategy-content" id="escuta-content">
+              <ul class="list-disc pl-5 mt-2 mb-2">
+                <li>Faça contato visual e demonstre atenção com linguagem corporal</li>
+                <li>Faça perguntas abertas para entender perspectivas</li>
+                <li>Parafraseie o que ouviu para confirmar entendimento</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Estratégia 4 -->
+          <div class="strategy-item animated-element" style="animation-delay: 1.0s" data-strategy="feedback">
+            <div class="strategy-title">
+              <i class="fas fa-exchange-alt mr-2"></i>
+              Feedback estruturado
+            </div>
+            <div class="strategy-content" id="feedback-content">
+              <ul class="list-disc pl-5 mt-2 mb-2">
+                <li>Use o modelo SCI: Situação, Comportamento, Impacto</li>
+                <li>Seja específico e objetivo, evitando generalizações</li>
+                <li>Equilibre pontos positivos e áreas de melhoria</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Estratégia 5 -->
+          <div class="strategy-item animated-element" style="animation-delay: 1.2s" data-strategy="assertiva">
+            <div class="strategy-title">
+              <i class="fas fa-comment-dots mr-2"></i>
+              Comunicação assertiva
+            </div>
+            <div class="strategy-content" id="assertiva-content">
+              <ul class="list-disc pl-5 mt-2 mb-2">
+                <li>Use declarações em primeira pessoa: "Eu penso/sinto"</li>
+                <li>Expresse discordância de forma respeitosa</li>
+                <li>Estabeleça limites claros quando necessário</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade dos itens de estratégia
+        const strategyItems = document.querySelectorAll('.strategy-item');
+        
+        strategyItems.forEach(item => {
+          item.addEventListener('click', function() {
+            const strategy = this.getAttribute('data-strategy');
+            const content = document.getElementById(`${strategy}-content`);
+            
+            // Toggle da classe active no conteúdo clicado
+            content.classList.toggle('active');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

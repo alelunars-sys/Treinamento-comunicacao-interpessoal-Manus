@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #FFFFFF;
+        color: #34495E;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        color: #2C3E50;
+        margin-bottom: 24px;
+      }
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #2C3E50;
+        margin-bottom: 16px;
+      }
+      .accent-bar {
+        width: 6px;
+        background-color: #E74C3C;
+        border-radius: 3px;
+      }
+      .book-item {
+        border-left: 3px solid #3498DB;
+        padding-left: 16px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .book-item:hover {
+        transform: translateX(5px);
+        background-color: #EBF5FB;
+      }
+      .commitment-card {
+        border: 2px solid #3498DB;
+        border-radius: 12px;
+        padding: 16px;
+        transition: all 0.3s ease;
+      }
+      .commitment-card:hover {
+        box-shadow: 0 8px 16px rgba(52, 152, 219, 0.2);
+      }
+      .next-topic {
+        background: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+        color: white;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .animated-element {
+        animation: fadeIn 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container p-12">
+      <div class="flex items-center mb-8">
+        <div class="accent-bar h-10 mr-4"></div>
+        <h1 class="animated-element">Próximos Passos e Recomendações</h1>
+      </div>
+      
+      <div class="flex">
+        <!-- Coluna da esquerda -->
+        <div class="w-1/2 pr-8">
+          <div class="mb-6">
+            <img src="/home/ubuntu/upload/search_images/513UpkPgzyL8.jpg" alt="Relacionamento interpessoal" class="rounded-lg shadow-lg animated-element" style="width: 520px; height: 300px; object-fit: cover;">
+          </div>
+          
+          <div class="commitment-card animated-element" style="animation-delay: 0.4s">
+            <h2 class="flex items-center">
+              <i class="fas fa-handshake text-blue-600 mr-3"></i>
+              Compromisso de Ação
+            </h2>
+            <p class="mb-4">
+              Defina uma meta SMART (Específica, Mensurável, Alcançável, Relevante e Temporal) relacionada à melhoria de sua comunicação interpessoal para as próximas duas semanas:
+            </p>
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <textarea id="commitment-text" class="w-full h-24 p-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Meu compromisso é..."></textarea>
+              <div class="flex justify-end mt-2">
+                <button id="save-commitment" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition duration-200">
+                  Salvar Compromisso
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Coluna da direita -->
+        <div class="w-1/2 pl-8">
+          <h2 class="animated-element" style="animation-delay: 0.2s">Recomendações de Leitura</h2>
+          
+          <div class="book-item animated-element" style="animation-delay: 0.3s">
+            <div class="flex items-start">
+              <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+              <div>
+                <h3 class="font-semibold">"Comunicação Não-Violenta"</h3>
+                <p class="text-sm">Marshall B. Rosenberg</p>
+                <p class="text-xs italic">Técnicas para aprimorar relacionamentos pessoais e profissionais</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="book-item animated-element" style="animation-delay: 0.4s">
+            <div class="flex items-start">
+              <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+              <div>
+                <h3 class="font-semibold">"Crucial Conversations"</h3>
+                <p class="text-sm">Kerry Patterson et al.</p>
+                <p class="text-xs italic">Estratégias para comunicação eficaz em situações de alta pressão</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="book-item animated-element" style="animation-delay: 0.5s">
+            <div class="flex items-start">
+              <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+              <div>
+                <h3 class="font-semibold">"Falar Bem em Público"</h3>
+                <p class="text-sm">Dale Carnegie</p>
+                <p class="text-xs italic">Técnicas práticas para apresentações e discursos</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="book-item animated-element" style="animation-delay: 0.6s">
+            <div class="flex items-start">
+              <i class="fas fa-book text-blue-500 mt-1 mr-3"></i>
+              <div>
+                <h3 class="font-semibold">"Inteligência Emocional"</h3>
+                <p class="text-sm">Daniel Goleman</p>
+                <p class="text-xs italic">Como o autoconhecimento emocional impacta nossas interações</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="next-topic mt-8 animated-element" style="animation-delay: 0.8s">
+            <h2 class="text-white mb-2">Próximo Tópico</h2>
+            <div class="flex items-center">
+              <div class="bg-white rounded-full p-3 mr-4">
+                <i class="fas fa-comments text-blue-600 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl">Feedback Construtivo e Gestão de Conflitos</h3>
+                <p class="text-sm mt-1">
+                  Aprenda técnicas avançadas para dar e receber feedback e estratégias para transformar conflitos em oportunidades de crescimento.
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 text-sm">
+              <p class="flex items-center">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>Início: Próxima semana</span>
+              </p>
+              <p class="flex items-center mt-1">
+                <i class="fas fa-file-alt mr-2"></i>
+                <span>Leitura prévia recomendada: "The Art of Giving and Receiving Feedback"</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Interatividade do botão de salvar compromisso
+        const saveButton = document.getElementById('save-commitment');
+        const textArea = document.getElementById('commitment-text');
+        
+        saveButton.addEventListener('click', function() {
+          const commitment = textArea.value.trim();
+          
+          if (commitment) {
+            // Salva o compromisso (simulação)
+            this.textContent = 'Compromisso Salvo!';
+            this.classList.remove('bg-blue-500', 'hover:bg-blue-600');
+            this.classList.add('bg-green-500');
+            
+            // Desabilita a edição
+            textArea.disabled = true;
+            
+            // Restaura após 3 segundos
+            setTimeout(() => {
+              this.textContent = 'Salvar Compromisso';
+              this.classList.remove('bg-green-500');
+              this.classList.add('bg-blue-500', 'hover:bg-blue-600');
+              textArea.disabled = false;
+            }, 3000);
+          }
+        });
+        
+        // Efeito hover nos itens de livros
+        const bookItems = document.querySelectorAll('.book-item');
+        bookItems.forEach(item => {
+          item.addEventListener('mouseenter', function() {
+            this.querySelector('i').classList.add('fa-bounce');
+          });
+          
+          item.addEventListener('mouseleave', function() {
+            this.querySelector('i').classList.remove('fa-bounce');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
